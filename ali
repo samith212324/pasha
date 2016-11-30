@@ -1,0 +1,5 @@
+Let me show a much more simple alternative, that we can call the cactus model. It gets the name from the fact that all branches branch out from a wide trunk (master branch) and never get merged back. Cactus model should reflect much better the way that comes up naturally when working with git and making sure that continuous integration principles are used.
+
+In figure 1 you can see the principle how the cactus branching model works and following sections explain the reasoning behind it. Some principles shown here may need Gerrit or similar integrated code review and repository management system to be fully usable.
+
+All development hap
