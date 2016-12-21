@@ -48,7 +48,7 @@
         <id>central</id>
         <name>DESKTOP-EG82A6J-releases</name>
         <url>http://localhost:7070/artifactory/ext-release-local</url>
-    </repository>
+        </repository>
 	</distributionManagement>
 	
 </project>
