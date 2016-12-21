@@ -110,8 +110,8 @@ import (
 																																																																									assert.Equal(t, "/bin/ls", path)
 																																																																									}
 
-																																																																									func TestIsExecutable(t *testing.T) {
-																																																																										fileinfo, err := os.Stat("/bin/ls")
-																																																																											assert.Nil(t, err)
-																																																																												assert.True(t, isExecutable(fileinfo))
-																																																																												}
+
+
+
+
+
