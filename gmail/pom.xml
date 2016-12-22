@@ -3,7 +3,7 @@
 
   <groupId>in.co.gmail</groupId>
   <artifactId>gmail</artifactId>
-  <version>6.1</version>
+  <version>6.2-SNAPSHOT</version>
   <packaging>jar</packaging>
 
   <name>gmail</name>
@@ -13,7 +13,7 @@
 		<url>https://github.com/samith212324/githubworkspace</url>
 		<connection>scm:git:git://github.com/samith212324/githubworkspace.git</connection>
 		<developerConnection>scm:git:git@github.com:samith212324/githubworkspace.git</developerConnection>
-	  <tag>gmail-6.1</tag>
+	  <tag>HEAD</tag>
   </scm>
 
 
