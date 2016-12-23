@@ -3,14 +3,14 @@
 
   <groupId>in.co.banking</groupId>
   <artifactId>icici</artifactId>
-  <version>8.1-SNAPSHOT</version>
+  <version>9.0</version>
   <packaging>jar</packaging>
 
    <scm>
 		<url>https://github.com/samith212324/githubworkspace</url>
 		<connection>scm:git:git://github.com/samith212324/githubworkspace.git</connection>
 		<developerConnection>scm:git:git@github.com:samith212324/githubworkspace.git</developerConnection>
-	  <tag>HEAD</tag>
+	  <tag>9.0</tag>
   </scm>
 
   
