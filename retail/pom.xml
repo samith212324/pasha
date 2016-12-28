@@ -3,7 +3,7 @@
 
   <groupId>com.in.retailing</groupId>
   <artifactId>retail</artifactId>
-  <version>6.0</version>
+  <version>6.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
   <name>retail</name>
@@ -13,7 +13,7 @@
 		<url>https://github.com/samith212324/pasha</url>
 		<connection>scm:git:git://github.com/samith212324/pasha.git</connection>
 		<developerConnection>scm:git:git@github.com:samith212324/pasha.git</developerConnection>
-	  <tag>retail-6.0</tag>
+	  <tag>HEAD</tag>
   </scm>
 
 
