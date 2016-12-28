@@ -10,6 +10,7 @@
 
   <name>examples</name>
   <url>http://maven.apache.org</url>
+  
 <scm>
 		<url>https://github.com/samith212324/githubworkspace</url>
 		<connection>scm:git:git://github.com/samith212324/githubworkspace.git</connection>
@@ -41,18 +42,21 @@
    </plugin>
    </plugins>
    </build>
+   
   	<distributionManagement>
 		
-    <repository>
+     <repository>
         <id>central</id>
         <name>DESKTOP-EG82A6J-releases</name>
         <url>http://localhost:7070/artifactory/ext-release-local</url>
-    </repository>
+     </repository>
 
-    <snapshotRepository>
+     <snapshotRepository>
         <id>snapshots</id>
         <name>DESKTOP-EG82A6J-snapshots</name>
         <url>http://localhost:7070/artifactory/ext-snapshot-local</url>
-    </snapshotRepository>
-</distributionManagement>
+     </snapshotRepository>
+	
+    </distributionManagement>
+
 </project>
