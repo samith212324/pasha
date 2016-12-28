@@ -12,8 +12,8 @@
 
   <scm>
 		<url>https://github.com/samith212324/githubworkspace/tree/master/info</url>
-		<connection>scm:git:git://github.com/samith212324/githubworkspace/tree/master/info</connection>
-		<developerConnection>scm:git:git@github.com:samith212324/githubworkspace/tree/master/info</developerConnection>
+		<connection>scm:git:git://github.com/samith212324/githubworkspace.git</connection>
+		<developerConnection>scm:git:git@github.com:samith212324/githubworkspace.git</developerConnection>
 	  <tag>HEAD</tag>
   </scm>
   <properties>
