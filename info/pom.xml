@@ -10,6 +10,12 @@
   <name>info</name>
   <url>http://maven.apache.org</url>
 
+  <scm>
+		<url>https://github.com/samith212324/githubworkspace/tree/master/info</url>
+		<connection>scm:git:git://github.com/samith212324/githubworkspace/tree/master/info</connection>
+		<developerConnection>scm:git:git@github.com:samith212324/githubworkspace/tree/master/info</developerConnection>
+	  <tag>HEAD</tag>
+  </scm>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
@@ -22,4 +28,28 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+  
+   <build>
+  <plugins>
+  <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-release-plugin</artifactId>
+        <version>2.5.3</version>
+  </plugin>
+  </plugins>
+  </build>
+  
+   <distributionManagement>
+    <snapshotRepository>
+        <id>central</id>
+        <name>DESKTOP-EG82A6J-snapshots</name>
+        <url>http://localhost:7070/artifactory/ext-snapshot-local</url>
+    </snapshotRepository>
+    <repository>
+        <id>central</id>
+        <name>DESKTOP-EG82A6J-releases</name>
+        <url>http://localhost:7070/artifactory/ext-release-local</url>
+    </repository>
+</distributionManagement>
+
 </project>
