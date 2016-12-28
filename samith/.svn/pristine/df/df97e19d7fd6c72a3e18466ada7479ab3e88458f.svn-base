@@ -1,0 +1,11 @@
+#release configuration
+#Thu Dec 22 15:00:14 IST 2016
+scm.tagNameFormat=@{project.artifactId}-@{project.version}
+pushChanges=true
+scm.url=scm\:svn\:http\://192.168.1.18/samith/airlines/src
+preparationGoals=clean verify
+projectVersionPolicyId=default
+remoteTagging=true
+scm.commentPrefix=[maven-release-plugin] 
+exec.snapshotReleasePluginAllowed=false
+completedPhase=check-poms

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+ <modelVersion>4.0.0</modelVersion>
+  <groupId>in.co.d1</groupId>
+  <artifactId>d1</artifactId>
+  <packaging>jar</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <name>d1</name>
+  <url>http://maven.apache.org</url>
+
+      <scm>
+    <connection>scm:svn:http://localhost/samith/d1/</connection>
+    <developerConnection>scm:svn:http://localhost/samith/d1/</developerConnection>
+    <url>http://localhost/samith/d1/</url>
+  </scm>
+ <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+ <version>3.8.1</version>   
+ <scope>test</scope>
+
+   </dependency>
+  </dependencies>
+  
+  
+  
+<build>
+  
+  
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-release-plugin</artifactId>
+        <version>2.5.3</version>
+      </plugin>
+    </plugins>
+
+  </build>
+
+  <distributionManagement>
+  
+    <repository>
+        <id>central</id>
+        <name>mohmmadh pasha-releases</name>
+        <url>http://localhost:8080/artifactory/ext-release-local</url>
+    </repository>
+
+
+
+    <snapshotRepository>
+        <id>snapshots</id>
+        <name>mohmmadh pasha-snapshots</name>
+        <url>http://localhost:8080/artifactory/ext-snapshot-local</url>
+    </snapshotRepository>
+	
+	
+	
+</distributionManagement>
+</project>

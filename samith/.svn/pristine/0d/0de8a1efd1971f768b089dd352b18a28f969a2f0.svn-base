@@ -1,0 +1,729 @@
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+<!-- The Basics -->
+
+    <groupId>com.xxxx.tss.dm</groupId>
+
+    <artifactId>tsdm</artifactId>
+
+    <version>7.1.0-SNAPSHOT</version>
+
+    <packaging>pom</packaging>
+
+    <dependencies>
+
+        <dependency>
+
+            <groupId>junit</groupId>
+
+            <artifactId>junit</artifactId>
+
+            <version>4.8.2</version>
+
+            <scope>test</scope>
+
+        </dependency>
+
+    </dependencies>
+
+    <dependencyManagement>
+
+    </dependencyManagement>
+
+<!--http://maven.apache.org/pom.html#Aggregation -->
+
+    <modules>
+
+        <module>dm-parent</module>
+
+<!--Deal Manager Credit Scoring Modules-->
+
+        <module>dm-db</module>
+
+        <module>dmcs-common</module>
+
+        <module>dmcs-logic</module>
+
+                                <module>dmpm-common</module>
+
+                                <module>dmpm-dao</module>
+
+                                <module>dmpm-model</module>
+
+                                <module>dmpm-mock</module>
+
+                                <module>dmpm-service</module>
+
+                                <module>dmpm-webapp</module>
+
+        <module>dmcs-dao-services</module>
+
+        <module>dmcs-ws-cxf-client</module>
+
+        <module>dmcs-ws-cxf-impl</module>
+
+        <module>dmcs-webapp</module>
+
+        <module>dmcs-logic-db-deploy</module>
+
+        <module>dmcs-configuration</module>
+
+        <module>dm-configuration</module>
+
+        <module>dm-common</module>
+
+        <module>dm-model</module>
+
+        <module>dm-webservice-consume</module>
+
+                                <module>dm-webservice-consume-cxf</module>
+
+        <module>dm-pureedge-ejb-client</module>
+
+        <module>dm-filenet-mock</module>
+
+        <module>dm-dao</module>
+
+                                <module>dm-dao-impl-cxf</module>
+
+        <module>dm-service</module>
+
+        <module>dm-xmlbeans</module>
+
+                                <module>dm-forms-webapp</module>
+
+                                <module>dm-forms-webapp-ear</module>
+
+        <module>dm-webservice</module>
+
+        <module>dm-webapp</module>
+
+        <module>dm-webservice-client</module>
+
+        <module>dm-compmgr</module>
+
+        <module>dm-scheduling</module>
+
+        <module>dm-mock</module>
+
+        <module>dm-pureedge-ejb</module>
+
+        <module>dm-forms</module>
+
+        <module>dm-orbeon</module>
+
+        <module>dm-workflow</module>
+
+                                <module>dm-workflow-deploy</module>
+
+        <module>dm-pureedge-ejb-ear</module>
+
+        <module>dm-filenet-deploy</module>
+
+        <module>dm-ats-dct-converter</module>
+
+                    <module>dm-startup</module>
+
+                    <module>workflow-parent</module>            
+
+                    <module>workflow-webapp</module>
+
+                    <module>workflow-jbpm</module>
+
+                    <module>workflow-service</module>
+
+                    <module>workflow-dao</module>
+
+                    <module>workflow-model</module>
+
+                    <module>workflow-common</module>
+
+                    <module>workflow-event</module>
+
+                    <module>workflow-versioning</module>
+
+                    <module>workflow-xmlbeans</module>      
+
+                    <module>workflow-reprocess</module>
+
+                                <module>workflow-webservice-consume</module>
+
+                </modules>
+
+    <properties>
+
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <skipTests>true</skipTests>
+
+        <maven.test.failure.ignore>true</maven.test.failure.ignore>
+
+        <cobertura.maxmem>512M</cobertura.maxmem>
+
+        <fork.flag>false</fork.flag>
+
+    </properties>
+
+<!-- Build Settings -->
+
+    <build>
+
+        <extensions>
+
+<!--
+
+            <extension>
+
+                <groupId>org.apache.maven.wagon</groupId>
+
+                <artifactId>wagon-scm</artifactId>
+
+                <version>1.0-beta-7tsdm</version>
+
+            </extension>
+
+        -->
+
+            <extension>
+
+                <groupId>org.apache.maven.scm</groupId>
+
+                <artifactId>maven-scm-manager-plexus</artifactId>
+
+                <version>1.0</version>
+
+            </extension>
+
+            <extension>
+
+                <groupId>org.apache.maven.scm</groupId>
+
+                <artifactId>maven-scm-provider-svnexe</artifactId>
+
+                <version>1.0</version>
+
+            </extension>
+
+        </extensions>
+
+        <pluginManagement>
+
+            <plugins>
+
+                <plugin>
+
+                    <groupId>org.apache.maven.plugins</groupId>
+
+                    <artifactId>maven-compiler-plugin</artifactId>
+
+                    <configuration>
+
+                        <source>1.5</source>
+
+                        <target>1.5</target>
+
+                        <fork>${fork.flag}</fork>
+
+                        <maxmem>512m</maxmem>
+
+                        <meminitial>512m</meminitial>
+
+                    </configuration>
+
+                </plugin>
+
+                <plugin>
+
+                    <groupId>org.apache.maven.plugins</groupId>
+
+                    <artifactId>maven-dependency-plugin</artifactId>
+
+                </plugin>
+
+                <plugin>
+
+                    <groupId>org.apache.maven.plugins</groupId>
+
+                    <artifactId>maven-surefire-plugin</artifactId>
+
+                    <configuration>
+
+                        <skipTests>${skipTests}</skipTests>
+
+                        <disableXmlReport>false</disableXmlReport>
+
+                        <useFile>false</useFile>
+
+                        <includes>
+
+                            <include>**/*Test.java</include>
+
+                            <include>**/*Test_Exception.java</include>
+
+                            <include>**/*Test_Null.java</include>
+
+                        </includes>
+
+                        <forkMode>once</forkMode>
+
+                        <argLine>-Xms512m -Xmx512m -XX:MaxPermSize=256m</argLine>
+
+                    </configuration>
+
+                </plugin>
+
+                <plugin>
+
+                    <groupId>org.apache.maven.plugins</groupId>
+
+                    <artifactId>maven-jar-plugin</artifactId>
+
+                    <version>2.2</version>
+
+                    <configuration>
+
+                        <archive>
+
+                            <index>true</index>
+
+                            <compress>true</compress>
+
+                            <forced>false</forced>
+
+                            <manifest>
+
+                                <addExtensions>false</addExtensions>
+
+                                <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+
+                                <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
+
+                            </manifest>
+
+                            <manifestEntries>
+
+                                <url>${pom.url}</url>
+
+                            </manifestEntries>
+
+                        </archive>
+
+                    </configuration>
+
+                </plugin>
+
+                <plugin>
+
+                    <groupId>org.apache.maven.plugins</groupId>
+
+                    <artifactId>maven-war-plugin</artifactId>
+
+                    <configuration>
+
+                        <archive>
+
+                            <index>true</index>
+
+                            <compress>true</compress>
+
+                            <forced>false</forced>
+
+                            <manifest>
+
+                                <addExtensions>false</addExtensions>
+
+                                <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+
+                                <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
+
+                            </manifest>
+
+                            <manifestEntries>
+
+                                <url>${pom.url}</url>
+
+                            </manifestEntries>
+
+                        </archive>
+
+                    </configuration>
+
+                </plugin>
+
+                <plugin>
+
+                    <groupId>org.apache.maven.plugins</groupId>
+
+                    <artifactId>maven-site-plugin</artifactId>
+
+                    <version>2.1.1</version>
+
+                </plugin>
+
+            </plugins>
+
+        </pluginManagement>
+
+        <plugins>
+
+            <plugin>
+
+                <groupId>org.apache.maven.plugins</groupId>
+
+                <artifactId>maven-checkstyle-plugin</artifactId>
+
+                <version>2.6</version>
+
+<!-- uncomment for maven 2.2.0+
+
+                <dependencies>
+
+                    <dependency>
+
+                        <groupId>com.xxxx.tss.dm</groupId>
+
+                        <artifactId>dm-parent</artifactId>
+
+                        <version>7.1.0-SNAPSHOT</version>
+
+                    </dependency>
+
+                </dependencies>-->
+
+            </plugin>
+
+            <plugin>
+
+                <groupId>org.codehaus.mojo</groupId>
+
+                <artifactId>findbugs-maven-plugin</artifactId>
+
+            </plugin>
+
+        </plugins>
+
+    </build>
+
+    <reporting>
+
+        <plugins>
+
+            <plugin>
+
+                <groupId>org.apache.maven.plugins</groupId>
+
+                <artifactId>maven-surefire-report-plugin</artifactId>
+
+            </plugin>
+
+            <plugin>
+
+                <groupId>org.apache.maven.plugins</groupId>
+
+                <artifactId>maven-jxr-plugin</artifactId>
+
+            </plugin>
+
+            <plugin>
+
+                <groupId>org.apache.maven.plugins</groupId>
+
+                <artifactId>maven-checkstyle-plugin</artifactId>
+
+                <version>2.6</version>
+
+                <configuration>
+
+                    <configLocation>${basedir}/../dm-parent/src/main/resources/checkstyle/checkstyle.xml</configLocation>
+
+                </configuration>
+
+            </plugin>
+
+            <plugin>
+
+                <groupId>org.apache.maven.plugins</groupId>
+
+                <artifactId>maven-changes-plugin</artifactId>
+
+            </plugin>
+
+            <plugin>
+
+                <groupId>org.codehaus.mojo</groupId>
+
+                <artifactId>cobertura-maven-plugin</artifactId>
+
+            </plugin>
+
+            <plugin>
+
+                <groupId>org.codehaus.mojo</groupId>
+
+                <artifactId>jdepend-maven-plugin</artifactId>
+
+            </plugin>
+
+            <plugin>
+
+                <groupId>org.apache.maven.plugins</groupId>
+
+                <artifactId>maven-pmd-plugin</artifactId>
+
+                <configuration>
+
+                    <targetJdk>1.5</targetJdk>
+
+                </configuration>
+
+                <reportSets>
+
+                    <reportSet>
+
+                        <reports>
+
+                            <report>pmd</report>
+
+                        </reports>
+
+                    </reportSet>
+
+                </reportSets>
+
+            </plugin>
+
+            <plugin>
+
+                <groupId>org.codehaus.mojo</groupId>
+
+                <artifactId>findbugs-maven-plugin</artifactId>
+
+                <configuration>
+
+                    <excludeFilterFile>${basedir}/../dm-parent/src/main/resources/findbugs/findbugs_exclude.xml</excludeFilterFile>
+
+                    <threshold>Low</threshold>
+
+                </configuration>
+
+            </plugin>
+
+            <plugin>
+
+                <groupId>org.codehaus.mojo</groupId>
+
+                <artifactId>taglist-maven-plugin</artifactId>
+
+                <configuration>
+
+                    <tags>
+
+                        <tag>@fixme</tag>
+
+                        <tag>FIXME</tag>
+
+                        <tag>@todo</tag>
+
+                        <tag>TODO</tag>
+
+                    </tags>
+
+                </configuration>
+
+            </plugin>
+
+        </plugins>
+
+    </reporting>
+
+<!-- More Project Information -->
+
+    <name>TS Deal Manager Project</name>
+
+    <description>This is the parent project for TS's Deal Manager Application.</description>
+
+    <url>
+
+    </url>
+
+    <inceptionYear>2005</inceptionYear>
+
+    <licenses>
+
+    </licenses>
+
+    <organization>
+
+        <name>J P Morgan - Treasury Services</name>
+
+        <url>http://www.xxxx.com</url>
+
+    </organization>
+
+    <developers>
+
+        <developer>
+
+            <id>h002803</id>
+
+            <name>Mark Jenison</name>
+
+            <email>mark.a.jenison@xxxx.com</email>
+
+            <roles>
+
+                <role>Architect</role>
+
+            </roles>
+
+            <timezone>-6</timezone>
+
+        </developer>
+
+    </developers>
+
+    <contributors>
+
+    </contributors>
+
+<!-- Environment Settings -->
+
+    <issueManagement>
+
+        <system>JIRA</system>
+
+        <url>https://jira2.xxxx.com/jira2/browse/TSDM</url>
+
+    </issueManagement>
+
+    <ciManagement>
+
+    </ciManagement>
+
+    <mailingLists>
+
+    </mailingLists>
+
+    <scm>
+
+        <connection>scm:svn:http://subversion.ny.xxxx.com/svn/repos/TSDM/branches/R7.1</connection>
+
+        <developerConnection>scm:svn:http://subversion.ny.xxxx.com/svn/repos/TSDM/branches/R7.1</developerConnection>
+
+        <url>http://subversion.ny.xxxx.com/svn/repos/TSDM/branches/R7.1</url>
+
+    </scm>
+
+    <repositories>
+
+        <repository>
+
+            <id>deal-manager-team-maven-repository</id>
+
+            <name>Deal Manager Team Repository for Maven</name>
+
+            <url>http://subversion.ny.xxxx.com/svn/repos/TSDM/repository/</url>
+
+        </repository>
+
+      <repository>
+
+        <id>fcrulesrepository</id>
+
+        <url>http://subversion.ny.xxxx.com/svn/repos/FCRules/trunk/repo_drools</url>
+
+      </repository>
+
+                                <repository>
+
+                                                <id>frsrepo</id>
+
+                                                <url>https://repo.xxxx.net/maven/content/repositories/qpid</url>
+
+                                </repository>
+
+                                <repository>
+
+                                                <id>Workflow team-maven-repository</id>
+
+                                                <name>Workflow Repository for Maven</name>
+
+                                                <url>https://repo.xxxx.net/maven/content/groups/abc-public/</url>
+
+                                </repository>
+
+    </repositories>
+
+    <pluginRepositories>
+
+    </pluginRepositories>
+
+    <distributionManagement>
+
+<!-- Site (Documentation) Server Distribution. -->
+
+        <site>
+
+            <id>deal-manager-maven-documents</id>
+
+            <name>Deal Manager Parent Maven 2 Documents</name>
+
+            <url>dav://fast/2.8.0/fc_full/fcHome/deployment/apache01/htdocs/TSDM</url>
+
+        </site>
+
+    </distributionManagement>
+
+    <profiles>
+
+        <profile>
+
+            <id>hudson</id>
+
+            <activation>
+
+                <property>
+
+                    <name>BUILD_NUMBER</name>
+
+                </property>
+
+            </activation>
+
+            <properties>
+
+                <fork.flag>true</fork.flag>
+
+            </properties>
+
+        </profile>
+
+    </profiles>
+
+</project>
+
+ 
+
+Thanks and Regards,
+
+ 
+
+Srinivas Nedunuri
+
+FAST DEI Support
+
+ 
+
+Thanks
+Ram
+
+
+
+-- 
+Ram 

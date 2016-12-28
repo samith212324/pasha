@@ -1,0 +1,15 @@
+#release configuration
+#Thu Dec 22 13:10:00 IST 2016
+project.scm.in.co.airlines\:airlines.tag=HEAD
+scm.tagNameFormat=@{project.artifactId}-@{project.version}
+scm.tag=airlines-2.0
+pushChanges=true
+scm.url=scm\:svn\:http\://192.168.1.18/samith/airlines/src
+preparationGoals=clean verify
+remoteTagging=true
+scm.commentPrefix=[maven-release-plugin] 
+project.scm.in.co.airlines\:airlines.developerConnection=scm\:svn\:http\://192.168.1.18/samith/airlines/src
+project.rel.in.co.airlines\:airlines=2.0
+exec.snapshotReleasePluginAllowed=false
+project.dev.in.co.airlines\:airlines=2.1-SNAPSHOT
+completedPhase=generate-release-poms

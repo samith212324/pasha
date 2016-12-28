@@ -1,0 +1,16 @@
+# pack-refs with: peeled fully-peeled 
+80e8e58a8581d5503e7dbc38b4ea577ff926af63 refs/remotes/origin/master
+a5313ac6d82ef5b72165bb49fbaf648cf1b00e74 refs/tags/9.0
+^fdc1d74a401a68877c3aef6018d1a22cadff2ea1
+6a76628e2c6a8be8cfcdea2e5f959f6e4772ee58 refs/tags/banking-3.0
+^3dec5d15482261d09c1b5bd2cbaa64feb2e83751
+b4be2193bc841ede5862fde3963165ff491609fb refs/tags/banking-3.1
+^28712bfb9d16d620f02faff19a21c204de008838
+0ad4801cd6422413249270d4289cb3ea4bd48b6c refs/tags/gmail-6.0
+^3b7590119ed83af8233161c3fe354a9e045a717d
+eeded919de1262e2e59cd2165b5f2fc3824c7de7 refs/tags/gmail-6.1
+^eae39cd15363d210f16d1c6fd89edeac05970ee4
+bae74b111e59e3d6430820476f34b36a090c6fa6 refs/tags/icici-8.0
+^35d7305cf0eaa2f91cae759e4283cb1b8261104c
+b2ab69695fdedef5b359c870c6abd224067f741e refs/tags/railways-8.0
+^8d60c0f412c0df9ea6ee78b0ef4021cfd054935d
