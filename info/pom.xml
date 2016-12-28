@@ -11,7 +11,7 @@
   <url>http://maven.apache.org</url>
 
   <scm>
-		<url>https://github.com/samith212324/githubworkspace</url>
+		<url>https://github.com/samith212324/githubworkspace.git</url>
 		<connection>scm:git:git://github.com/samith212324/githubworkspace.git</connection>
 		<developerConnection>scm:git:git@github.com:samith212324/githubworkspace.git</developerConnection>
 	  <tag>HEAD</tag>
